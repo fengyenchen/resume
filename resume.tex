@@ -1,0 +1,215 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+% 中文支援設定
+\usepackage{xeCJK} 
+% 自動偵測系統內建字型
+\IfFontExistsTF{Microsoft JhengHei}{
+  \setCJKmainfont{Microsoft JhengHei}
+}{
+  \setCJKmainfont{Heiti TC}
+}
+% 讓內文英文也維持原本的 Sans-serif 風格
+\renewcommand*\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+% -----------------------------------------
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% 標題區段格式（中文使用粗體粗線）
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge 馮妍禎 (Yen-Chen Feng)} \\ \vspace{5pt}
+    \small \faPhone* \texttt{0958545385} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{feng20050504@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faGithub \hspace{2pt} \texttt{fengyenchen} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Taipei, Taiwan}
+    \\ \vspace{-3pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{學歷背景}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {國立臺灣大學}{2023年9月 -- 2027年6月 (預計)}
+      {工商管理學系 專任學士班}{}
+      	\resumeItemListStart
+    	\resumeItem{\textbf{學業表現}：學期成績優異且維持顯著成長趨勢，於大三上學期取得班級排名突破性進步。}
+    	\resumeItem{\textbf{核心修課}：資料結構與演算法、文字探勘導論、系統分析與設計、資料庫管理、物件導向程式設計。}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{經歷}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {台大自造者社 (NTUMaker)}{2025年9月 -- 目前}
+      {幹部 -- 美宣}{}
+      \resumeItemListStart
+        \resumeItem{主導社團招生季之視覺識別設計，規劃並繪製多款高互動率的行銷海報與社群媒體圖文，顯著提升社團曝光度。}
+        \resumeItem{與跨領域團隊協作統籌多場手作工作坊，推動硬體實作與工藝愛好者之間的技術交流與社群凝聚。}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {國立臺灣大學戲劇學系}{2025年9月 -- 2025年12月}
+      {「沉浸式科技劇場」課程助教 (TA)}{}
+      \resumeItemListStart
+        \resumeItem{協助管理課程日常教務運作，並為跨足科技與表演藝術領域的學生提供即時的技術諮詢與設備排錯。}
+        \resumeItem{指導學生團隊將互動元素與硬體設備融入劇場期末展演，有效優化技術執行完整度與整體視覺呈現效果。}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{專案成果}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+         {\textbf{AI 股票投資決策支援網頁平台} $|$ \emph{React, Vite, Tailwind CSS, Python}}{2026年3月 -- 目前}
+          \resumeItemListStart
+            \resumeItem{參與小組團隊開發，打造提供即時股市分析與 AI 驅動投資策略建議的全端決策支援平台（Group Q）。}
+            \resumeItem{負責撰寫完整的系統需求規格書（SRS）並擬定數據導向的風險管理計劃，確保系統架構的穩定性與範疇一致。}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{MakeNTU 2026 硬體黑客松專案} $|$ \emph{硬體整合、嵌入式系統開發}}{2026年5月}
+          \resumeItemListStart
+            \resumeItem{參與全台規模最大的硬體黑客松，針對慧榮（Silicon Motion）指定出題進行深度分析與創新發想。}
+            \resumeItem{於36小時內完成硬體組件整合與物聯網原型機快速開發，並向業界評審進行技術架構簡報。}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{「臨時的永恆」建築微縮模型} $|$ \emph{Blender, 3D 列印, 實體工藝}}{2026年3月 -- 2026年5月}
+          \resumeItemListStart
+            \resumeItem{執行為期 10 週的嚴謹時程規劃，製作 1:24 比例的建築模型，捕捉結構秩序與藝術靈感間的平衡。}
+            \resumeItem{於 Blender 中建模家具與組件，並透過 3D 列印與進階舊化技法呈現細緻質感。}
+          \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{生成藝術作品集} $|$ \emph{p5.js, JavaScript}}{2025年9月 -- 目前}
+          \resumeItemListStart
+            \resumeItem{運用創意程式設計（Creative Coding）創作一系列互動式數位藝術作品，探索程式碼中的視覺敘事。}
+            \resumeItem{於 p5.js 中編寫演算法邏輯，以結構化的「方塊塊面」代替細線，建構出具空間氛圍感與動態平衡的視覺構圖。}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{技能專長}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{程式語言與框架} {: Python, JavaScript, React, Vite, Tailwind CSS, HTML/CSS, SQL, p5.js} \vspace{2pt} \\
+     \textbf{工具} {: Git / GitHub, Figma, Notion, Adobe Illustrator}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
